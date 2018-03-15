@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+  Prism by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+  <head>
+    <title>ICU ML Soc</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
+  </head>
+  <body>
+
+    <!-- Banner -->
+      <section id="banner">
+        <div class="inner split">
+          <section>
+            <img id="logo" src="/images/logo.png" />
+            <h2>ICU Machine Learning Society</h2>
+          </section>
+          <section>
+            <p>As Imperial College London's Machine Learning society, we are dedicated towards nurturing and supporting interest in artificial intelligence. To accomplish this, we are organizing startup projects, academic workshops and industrial events for everyone to explore.</p>
+            <ul class="actions">
+              <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/machine-learning" class="button special">Become a Member</a></li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+    <!-- One -->
+      <section id="one" class="wrapper">
+        <div class="inner split">
+          <section>
+            <h2>Who we are</h2>
+            <p>Lorem ipsum nisl sed cursus magna et amet veroeros. Sed phasellus aliquam et tempus lorem feugiat adipiscing lorem. Morbi pharetra vitae felis placerat pharetra. Nulla risus orci, dapibus id malesuada et nec, malesuada quis orci. Pellentesque eget consequat.</p>
+            <img style="width:100%" src="https://source.unsplash.com/T6zu4jFhVwg/900x500" />
+          </section>
+          <section>
+            <h2>Our Courses</h2>
+            <p>Lorem ipsum nisl sed cursus magna et amet veroeros. Sed phasellus aliquam et tempus lorem feugiat adipiscing lorem. Morbi pharetra vitae felis placerat pharetra. Nulla risus orci, dapibus id malesuada et nec, malesuada quis orci. Pellentesque eget consequat.</p>
+            <ul class="checklist">
+              <li>Machine Learning Basics</li>
+              <li>Introduction to Deep Learning</li>
+            </ul>
+            <ul class="actions">
+              <li><a href="https://www.imperialcollegeunion.org/shop/club-society-project-products/machine-learning-products/" class="button alt">Buy Tickets</a></li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+    <!-- Two -->
+      <section id="two" class="wrapper style2 alt">
+
+        <div class="inner">
+
+          {{range .EventListSummary}}
+          <div class="spotlight">
+            <div class="image">
+              <img src="{{.Picture.Source}}" alt="" />
+            </div>
+            <div class="content">
+              <h3>{{.Title}}</h3>
+              <p><i>{{.StartTime}}</i><br>{{.Description}}</p>
+              <ul class="actions">
+                <li><a href="https://www.facebook.com/events/{{.FacebookId}}" class="button alt">Details</a></li>
+                {{if .Tickets}}
+                <li><a href="{{.Tickets}}" class="button alt">Tickets</a></li>
+                {{end}}
+              </ul>
+            </div>
+          </div>
+          {{end}}
+
+          {{if len .EventList}}
+          <ul class="actions special">
+            <li><a href="https://www.facebook.com/pg/ICLML/events/" class="button alt">Show All</a></li>
+          </ul>
+          {{end}}
+
+        </div>
+      </section>
+
+    <!-- Contact -->
+      <section id="contact" class="wrapper">
+        <div class="inner split">
+          <section>
+            {{if len .Sponsors}}
+            <h2>Our Sponsors</h2>
+            <p>We are greatful to the companies who enable us to build a strong machine learning community at Imperial College London.</p>
+
+            {{range .Sponsors}}
+            <img id="sponsor" src="/sponsors/{{.}}" />
+            {{end}}
+            {{end}}
+          </section>
+          <section>
+            <ul class="contact">
+              <li class="fa-twitter"><a href="https://twitter.com/ML_ICL">Twitter</a></li>
+              <li class="fa-facebook"><a href="https://www.facebook.com/ICLML">Facebook</a></li>
+              <li class="fa-github"><a href="https://github.com/ML-Society">GitHub</a></li>
+              <li class="fa-home">Imperial College London<br/>Kensington SW72AZ<br/>United Kingdom</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+    <!-- Footer -->
+      <footer id="footer">
+        <div class="copyright">
+          &copy; <a href="https://www.imperialcollegeunion.org/activities/a-to-z/machine-learning">ICU ML Soc</a>. All rights reserved.
+        </div>
+      </footer>
+
+    <!-- Scripts -->
+    <script src="/js/particles.js"></script>
+    <script>
+      particlesJS.load('banner', 'js/particles-config.json');
+    </script>
+
+  </body>
+</html>
