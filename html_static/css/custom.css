@@ -1,7 +1,7 @@
 /* Custom additions to main.css */
 
 #logo {
-  width:80px;
+  width:100px;
   max-width:50%;
   display:block;
   margin-top:-90px;
@@ -30,4 +30,14 @@ canvas.particles-js-canvas-el {
   position:relative;
   z-index:1;
   pointer-events:auto;
+}
+
+#banner {
+  background-image: url("/images/background/3.jpg"), -moz-linear-gradient(45deg, #555 0%, #0e1625 100%);
+  background-image: url("/images/background/3.jpg"), -webkit-linear-gradient(45deg, #555 0%, #0e1625 100%);
+  background-image: url("/images/background/3.jpg"), -ms-linear-gradient(45deg, #555 0%, #0e1625 100%);
+  background-image: url("/images/background/3.jpg"), linear-gradient(45deg, #555 0%, #0e1625 100%);
+  background-position:center center;
+  background-size:cover;
+  background-blend-mode:overlay;
 }

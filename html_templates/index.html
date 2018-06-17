@@ -15,6 +15,72 @@
   </head>
   <body>
 
+    <!-- Careers Event Banner (temporary, delete after event) -->
+    <style type="text/css">
+      .event-banner-tmp-hidden {
+        display:none!Important;
+        pointer-events:none!Important;
+      }
+      .event-banner-tmp {
+        width:100%;
+        height:auto;
+        padding:25px 30px 15px 70px;
+        display:block;
+        position:relative;
+        margin:0;
+        background:#35a7ff;
+        z-index:1;
+      }
+      .event-banner-tmp img {
+        width:30px;
+        height:30px;
+        position:absolute;
+        top:25px;
+        left:30px;
+      }
+      .event-banner-tmp h1,
+      .event-banner-tmp p {
+        width:100%;
+        height:auto;
+        display:block;
+        margin:0 0 10px 0;
+        color:#fff;
+      }
+      .event-banner-tmp h1 {
+        font-size:25px;
+        line-height:30px;
+      }
+      .event-banner-tmp p {
+        font-size:18px;
+        line-height:20px;
+      }
+      .event-banner-tmp a {
+        height:30px;
+        width:auto;
+        padding:0 15px;
+        display:inline-block;
+        text-decoration:none;
+        border-radius:30px;
+        font-weight:800;
+        font-size:15px;
+        line-height:31px;
+        text-transform:uppercase;
+        color:#35a7ff;
+        background:#fff;
+      }
+    </style>
+    <div id="event-banner-tmp" class="event-banner-tmp event-banner-tmp-hidden">
+      <img class="event-banner-tmp-icon" src="/images/event-banner-tmp.svg">
+      <h1>25. JUN - Machine Learning Careers Fest</h1>
+      <a href="https://www.facebook.com/events/626308021063006">Learn More</a>
+    </div>
+    <script>
+      // Hide / Show temp banner
+      if (Date.now() < 1529971200000) {
+        document.getElementById("event-banner-tmp").classList.remove("event-banner-tmp-hidden");
+      }
+    </script>
+
     <!-- Banner -->
       <section id="banner">
         <div class="inner split">
