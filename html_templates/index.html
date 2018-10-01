@@ -126,8 +126,8 @@
     <!-- Two -->
       <section id="two" class="wrapper style2 alt">
         <div class="inner">
-          <h2>Events</h2>
           {{range .EventListSummary}}
+          <h2>Events</h2>
           <div class="spotlight">
             <div class="image">
               <img src="{{.Picture.Source}}" alt="" />
@@ -143,6 +143,10 @@
               </ul>
             </div>
           </div>
+          {{else}}
+          <ul class="actions special">
+            <li><a href="https://www.facebook.com/pg/ICLML/events/" class="button alt">Show Events On Facebook</a></li>
+          </ul>
           {{end}}
           {{if len .EventList}}
           <ul class="actions special">
