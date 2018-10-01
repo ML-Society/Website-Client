@@ -126,8 +126,10 @@
     <!-- Two -->
       <section id="two" class="wrapper style2 alt">
         <div class="inner">
-          {{range .EventListSummary}}
+          {{if len .EventList}}
           <h2>Events</h2>
+          {{end}}
+          {{range .EventListSummary}}
           <div class="spotlight">
             <div class="image">
               <img src="{{.Picture.Source}}" alt="" />
